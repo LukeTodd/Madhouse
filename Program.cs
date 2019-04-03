@@ -1,5 +1,6 @@
 ﻿using System;
 using MadHouse.Project;
+using MadHouse.Project.Models;
 
 namespace MadHouse
 {
@@ -35,11 +36,16 @@ namespace MadHouse
          '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'               
 ");
       System.Console.WriteLine(Environment.NewLine);
-      System.Console.WriteLine("WOULD YOU LIKE TO PLAY (Y/N)");
+      System.Console.WriteLine("WHAT IS YOUR NAME?");
+      string playerName = Console.ReadLine();
+      Player player = new Player(playerName);
+      System.Console.WriteLine($"Hello {playerName}, WOULD YOU LIKE TO PLAY (Y/N)");
       string playerChoice = Console.ReadLine().ToLower();
+      GameService gameService = new GameService(player);
       if (playerChoice == "y")
       {
-
+        gameService.Setup();
+        gameService.Run();
       }
       else return;
     }
