@@ -1,10 +1,10 @@
 using System.Collections.Generic;
-using CastleGrimtol.Project.Interfaces;
+using Madhouse.Project.Interfaces;
 
-namespace CastleGrimtol.Project
+namespace MadHouse.Project
 {
-    public class GameService : IGameService
-    {
+  public class GameService : IGameService
+  {
 
-    }
+  }
 }

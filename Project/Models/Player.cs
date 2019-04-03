@@ -1,10 +1,10 @@
 using System.Collections.Generic;
-using CastleGrimtol.Project.Interfaces;
+using MadHouse.Project.Interfaces;
 
-namespace CastleGrimtol.Project.Models
+namespace MadHouse.Project.Models
 {
-    public class Player : IPlayer
-    {
+  public class Player : IPlayer
+  {
 
-    }
+  }
 }

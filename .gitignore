@@ -4,6 +4,9 @@ project.lock.json
 .DS_Store
 *.pyc
 
+obj
+bin
+
 # Visual Studio Code
 .vscode
 
