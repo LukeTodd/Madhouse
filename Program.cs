@@ -9,7 +9,6 @@ namespace MadHouse
     public static void Main(string[] args)
     {
       Console.Clear();
-      System.Console.WriteLine("WELCOME TO");
       System.Console.WriteLine(Environment.NewLine);
       System.Console.WriteLine(@"
  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.   

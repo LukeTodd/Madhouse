@@ -5,6 +5,8 @@ namespace MadHouse.Project.Models
 {
   public class Player : IPlayer
   {
+    internal static object name;
+
     public string PlayerName { get; set; }
     public List<Item> Inventory { get; set; }
 

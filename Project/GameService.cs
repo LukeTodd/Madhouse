@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using MadHouse.Project.Interfaces;
 using MadHouse.Project.Models;
@@ -24,6 +25,7 @@ namespace MadHouse.Project
       Room outside = new Room("Outside", "You escape MadHouse Mansion and life a happy fullfilling life");
 
       Item key = new Item("Brass Key", "This is a brass key");
+      Item sword = new Item("Master Sword", "This is a master sword");
 
       startingRoom.Exits.Add("north", den);
       startingRoom.Exits.Add("south", foyer);
@@ -43,14 +45,98 @@ namespace MadHouse.Project
 
       closet.Items.Add(key);
 
+      CurrentRoom = startingRoom;
+
+      Console.Clear();
+      System.Console.WriteLine("YOU WAKE UP ON THE FLOOR WITH NO MEMORY OF HOW YOU GOT THERE");
+      System.Console.WriteLine($"WHAT WOULD YOU LIKE TO DO, {CurrentPlayer.PlayerName}?");
 
     }
 
     public void Run()
     {
+      while (Playing)
+      {
+
+        string playerChoice = Console.ReadLine();
+      }
+    }
+
+    public void GetUserInput()
+    {
+      string[] playerChoice = Console.ReadLine().ToLower().Split(" ");
+      string command = playerChoice[0];
+      string choice = "";
+      if (playerChoice.Length > 1)
+      {
+        choice = command;
+      }
+      switch (command)
+      {
+        case "go":
+          Go(command);
+          System.Console.WriteLine("you went in that direction");
+          break;
+
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+
+    public void Reset()
+    {
 
     }
 
+    public void StartGame()
+    {
+
+    }
+
+
+
+    public void Quit()
+    {
+
+    }
+
+    public void Help()
+    {
+
+    }
+
+    public void Go(string direction)
+    {
+
+    }
+
+    public void TakeItem(string itemName)
+    {
+
+    }
+
+    public void UseItem(string itemName)
+    {
+
+    }
+
+    public void Inventory()
+    {
+
+    }
+
+    public void Look()
+    {
+
+    }
 
     public GameService(Player newPlayer)
     {

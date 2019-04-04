@@ -10,45 +10,45 @@ namespace MadHouse.Project.Interfaces
 
     //Initializes the game, creates rooms, their exits, and add items to rooms
     void Setup();
-    {}
 
-  //Restarts the game 
-  void Reset();
 
-  //Setup and Starts the Game loop
-  void StartGame();
+    //Restarts the game 
+    void Reset();
 
-  //Gets the user input and calls the appropriate command
-  void GetUserInput();
+    //Setup and Starts the Game loop
+    void StartGame();
 
-  #region Console Commands
+    //Gets the user input and calls the appropriate command
+    void GetUserInput();
 
-  //Stops the application
-  void Quit();
+    #region Console Commands
 
-  //Should display a list of commands to the console
-  void Help();
+    //Stops the application
+    void Quit();
 
-  //Validate CurrentRoom.Exits contains the desired direction
-  //if it does change the CurrentRoom
-  void Go(string direction);
+    //Should display a list of commands to the console
+    void Help();
 
-  //When taking an item be sure the item is in the current room 
-  //before adding it to the player inventory, Also don't forget to 
-  //remove the item from the room it was picked up in
-  void TakeItem(string itemName);
+    //Validate CurrentRoom.Exits contains the desired direction
+    //if it does change the CurrentRoom
+    void Go(string direction);
 
-  //No need to Pass a room since Items can only be used in the CurrentRoom
-  //Make sure you validate the item is in the room or player inventory before
-  //being able to use the item
-  void UseItem(string itemName);
+    //When taking an item be sure the item is in the current room 
+    //before adding it to the player inventory, Also don't forget to 
+    //remove the item from the room it was picked up in
+    void TakeItem(string itemName);
 
-  //Print the list of items in the players inventory to the console
-  void Inventory();
+    //No need to Pass a room since Items can only be used in the CurrentRoom
+    //Make sure you validate the item is in the room or player inventory before
+    //being able to use the item
+    void UseItem(string itemName);
 
-  //Display the CurrentRoom Description, Exits, and Items
-  void Look();
+    //Print the list of items in the players inventory to the console
+    void Inventory();
 
-  #endregion
-}
+    //Display the CurrentRoom Description, Exits, and Items
+    void Look();
+
+    #endregion
+  }
 }
