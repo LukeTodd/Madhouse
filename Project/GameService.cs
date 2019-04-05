@@ -66,16 +66,35 @@ namespace MadHouse.Project
     {
       string[] playerChoice = Console.ReadLine().ToLower().Split(" ");
       string command = playerChoice[0];
-      string choice = "";
+      string choice;
       if (playerChoice.Length > 1)
       {
-        choice = command;
+        choice = playerChoice[1];
       }
+
       switch (command)
       {
         case "go":
           Go(command);
           System.Console.WriteLine("you went in that direction");
+          break;
+        case "look":
+          Look();
+          break;
+        case "quit":
+          Quit();
+          break;
+        case "reset":
+          Reset();
+          break;
+        case "help":
+          Help();
+          break;
+        case "take":
+          TakeItem(choice);
+          break;
+        case "use":
+          UseItem(choice);
           break;
 
       }
