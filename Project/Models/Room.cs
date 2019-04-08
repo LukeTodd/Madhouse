@@ -18,5 +18,6 @@ namespace MadHouse.Project.Models
       Items = new List<Item>();
       Exits = new Dictionary<string, IRoom>();
     }
+
   }
 }

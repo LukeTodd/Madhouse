@@ -42,7 +42,6 @@ namespace MadHouse.Project
       bedroom.Exits.Add("down", library);
       bedroom.Exits.Add("east", closet);
       closet.Exits.Add("west", bedroom);
-
       closet.Items.Add(key);
 
       CurrentRoom = startingRoom;
@@ -66,7 +65,7 @@ namespace MadHouse.Project
     {
       string[] playerChoice = Console.ReadLine().ToLower().Split(" ");
       string command = playerChoice[0];
-      string choice;
+      string choice = "";
       if (playerChoice.Length > 1)
       {
         choice = playerChoice[1];
@@ -75,7 +74,7 @@ namespace MadHouse.Project
       switch (command)
       {
         case "go":
-          Go(command);
+          Go(choice);
           System.Console.WriteLine("you went in that direction");
           break;
         case "look":
@@ -134,7 +133,15 @@ namespace MadHouse.Project
 
     public void Go(string direction)
     {
-
+      Console.Clear();
+      if (CurrentRoom.Exits.ContainsKey(direction))
+      {
+        CurrentRoom = CurrentRoom.Exits[direction];
+      }
+      else
+      {
+        Console.WriteLine("Invalid Direction");
+      }
     }
 
     public void TakeItem(string itemName)
