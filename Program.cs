@@ -44,7 +44,7 @@ namespace MadHouse
       if (playerChoice == "y")
       {
         gameService.Setup();
-        gameService.Run();
+
       }
       else return;
     }
