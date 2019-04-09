@@ -244,7 +244,7 @@ namespace MadHouse.Project
         CurrentRoom.Exits.Add("south", Locked2);
         CurrentPlayer.Inventory.Remove(item);
       }
-      else if (CurrentRoom.Name == "The Library" && i.Name == "Lever1")
+      // else if (CurrentRoom.Name == "The Library" && i.Name == "Lever1")
     }
 
     public void Inventory()
