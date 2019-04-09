@@ -11,12 +11,14 @@ namespace MadHouse.Project.Models
     public List<Item> Items { get; set; }
     public Dictionary<string, IRoom> Exits { get; set; }
 
+
     public Room(string name, string description)
     {
       Name = name;
       Description = description;
       Items = new List<Item>();
       Exits = new Dictionary<string, IRoom>();
+
     }
 
   }
